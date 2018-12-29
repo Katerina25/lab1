@@ -17,11 +17,12 @@ std::string& Book::_name() { return name; }
 std::string& Book::_author() { return author; }
 
 std::istream& operator >> (std::istream& in, Book& k) {
-	if (!(in >> k.cost >> k.pages >> k.year >> k.year >> k.annotation >> k.name >> k.author)) throw Exception("Error readig");
+	std::cout << " ¬ведите стоимость\n ¬ведите количество страниц\n ¬ведите год издани€\n ¬ведите жанр\n ¬ведите аннотацию\n ¬ведите название\n ¬ведите автора\n";
+	if (!(in >> k.cost >> k.pages >> k.year >> k.type >> k.annotation >> k.name >> k.author)) throw Exception("Error readig");
 	return in;
 }
 
 std::ostream& operator<<(std::ostream& out, const Book& k) {
-	out << k.cost << ' ' << k.pages << ' ' << k.year << ' ' << k.year << ' ' << k.annotation << ' ' << k.name << ' ' << k.author;
+	out << k.cost << ' ' << k.pages << ' ' << k.year << ' ' << k.type << ' ' << k.annotation << ' ' << k.name << ' ' << k.author;
 	return out;
 }

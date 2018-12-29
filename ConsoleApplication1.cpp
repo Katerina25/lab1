@@ -84,15 +84,15 @@ int main() {
 	ofstream out("data");
 	out << market._kanc().Size() << '\n';
 	for (int i = 0; i < market._kanc().Size(); ++i) {
-		out << market._kanc().Size() << '\n';
+		out << market._kanc()[i] << '\n';
 	}
 	out << market._book().Size() << '\n';
 	for (int i = 0; i < market._book().Size(); ++i) {
-		out << market._book().Size() << '\n';
+		out << market._book()[i] << '\n';
 	}
 	out << market._sbook().Size() << '\n';
 	for (int i = 0; i < market._sbook().Size(); ++i) {
-		out << market._sbook().Size() << '\n';
+		out << market._sbook()[i] << '\n';
 	}
 	out.close();
 }

@@ -11,10 +11,11 @@ std::string& Kanc::_color() { return color; }
 std::string& Kanc::_type() { return type; }
 
 std::istream& operator >> (std::istream& in, Kanc& k) {
-	if (!(in >> k.cost >> k.target >> k.target >> k.color >> k.type)) throw Exception("Error readig");
+	std::cout << " ¬ведите стоимость\n ¬ведите назначение\n ¬ведите цвет\n ¬ведите тип\n";
+	if (!(in >> k.cost >> k.target >> k.color >> k.type)) throw Exception("Error readig");
 	return in;
 }
 std::ostream& operator<<(std::ostream& out, const Kanc& k) {
-	out << k.cost << ' ' << k.target << ' ' << k.target << ' ' << k.color << ' ' << k.type;
+	out << k.cost << ' ' << k.target << ' ' << k.color << ' ' << k.type;
 	return out;
 }
